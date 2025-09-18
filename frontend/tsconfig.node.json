@@ -7,8 +7,6 @@
 
     /* Bundler mode */
     "moduleResolution": "node",
-    "allowImportingTsExtensions": false,
-    "verbatimModuleSyntax": false,
     "moduleDetection": "force",
     "noEmit": true,
 
