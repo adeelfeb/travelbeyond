@@ -14,7 +14,7 @@ const tours = [
       description: 'Explore the beautiful beaches and cultural heritage of Bali with our expert guides.',
       price: 899,
       duration: '7 days',
-      image: '/Bali.jpg',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=300&fit=crop&auto=format&q=60',
       rating: 4.8,
       location: 'Bali, Indonesia',
       category: 'adventure'
@@ -47,7 +47,7 @@ const tours = [
       description: 'Experience the wildlife and natural beauty of Africa on this unforgettable safari.',
       price: 1899,
       duration: '12 days',
-      image: '/African%20Saffari.jpg',
+      image: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=500&h=300&fit=crop&auto=format&q=60',
       rating: 4.9,
       location: 'Kenya, Tanzania',
       category: 'adventure'
@@ -58,7 +58,7 @@ const tours = [
       description: 'Relax and unwind on a luxury cruise through the beautiful Caribbean islands.',
       price: 1299,
       duration: '8 days',
-      image: '/Cruise.jpg',
+      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=300&fit=crop&auto=format&q=60',
       rating: 4.6,
       location: 'Caribbean',
       category: 'relaxation'
@@ -69,7 +69,7 @@ const tours = [
       description: 'Challenge yourself with this incredible trek through the majestic Himalayas.',
       price: 1199,
       duration: '15 days',
-      image: '/HimalayanTrek.jpg',
+      image: 'https://images.unsplash.com/photo-1509644851110-66e75b0c06af?w=500&h=300&fit=crop&auto=format&q=60',
       rating: 4.8,
       location: 'Nepal',
       category: 'adventure'
@@ -80,7 +80,7 @@ const tours = [
       description: 'Discover the stunning coastlines and historic cities of the Mediterranean.',
       price: 1799,
       duration: '11 days',
-      image: '/MediterraneanCoast.jpg',
+      image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&h=300&fit=crop&auto=format&q=60',
       rating: 4.7,
       location: 'Greece, Italy',
       category: 'cultural'
@@ -91,7 +91,7 @@ const tours = [
       description: 'Escape to pristine beaches and crystal-clear waters in this tropical getaway.',
       price: 999,
       duration: '6 days',
-      image: '/TropicalParadise.jpg',
+      image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&h=300&fit=crop&auto=format&q=60',
       rating: 4.5,
       location: 'Maldives',
       category: 'relaxation'

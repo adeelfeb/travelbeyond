@@ -6,7 +6,7 @@ interface StatsCardProps {
   value: string | number;
   change: string;
   changeType: 'positive' | 'negative' | 'neutral';
-  icon: string;
+  icon: 'users' | 'map' | 'camera' | 'document' | 'clipboard' | 'banknotes';
   color: 'blue' | 'green' | 'purple' | 'orange' | 'indigo' | 'emerald' | 'red' | 'yellow';
 }
 
@@ -77,14 +77,14 @@ const StatsCard = ({ title, value, change, changeType, icon, color }: StatsCardP
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
 
-  const getChangeIcon = () => {
+  const getChangeIconPath = () => {
     switch (changeType) {
       case 'positive':
-        return '↗️';
+        return 'M5 10l7 7 7-7';
       case 'negative':
-        return '↘️';
+        return 'M19 14l-7-7-7 7';
       default:
-        return '→';
+        return 'M5 12h14';
     }
   };
 
@@ -108,10 +108,19 @@ const StatsCard = ({ title, value, change, changeType, icon, color }: StatsCardP
     >
       <div className="flex items-center justify-between mb-4">
         <div className={`w-12 h-12 ${colors.icon} rounded-lg flex items-center justify-center text-2xl`}>
-          {icon}
+          <svg className="w-7 h-7 ${colors.text}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            {icon === 'users' && (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a4 4 0 00-4-4h-3m-4 6H2v-2a4 4 0 014-4h3m6-4a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" />)}
+            {icon === 'map' && (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A2 2 0 013 15.382V5a2 2 0 012-2h0a2 2 0 012 2v8l6 3 6-3V5a2 2 0 00-2-2h0" />)}
+            {icon === 'camera' && (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7h3l2-3h8l2 3h3v12H3V7zm9 3a4 4 0 100 8 4 4 0 000-8z" />)}
+            {icon === 'document' && (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7a2 2 0 012-2h5l5 5v9a2 2 0 01-2 2H9a2 2 0 01-2-2V7z" />)}
+            {icon === 'clipboard' && (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5h6a2 2 0 012 2v12a2 2 0 01-2 2H9a2 2 0 01-2-2V7a2 2 0 012-2zm0 0V3a2 2 0 012-2h2a2 2 0 012 2v2" />)}
+            {icon === 'banknotes' && (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18v6H3v-6zm2-4h14v4H5V6zm2 8h2m4 0h2" />)}
+          </svg>
         </div>
         <div className={`text-sm font-medium ${getChangeColor()} flex items-center space-x-1`}>
-          <span>{getChangeIcon()}</span>
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={getChangeIconPath()} />
+          </svg>
           <span>{change}</span>
         </div>
       </div>

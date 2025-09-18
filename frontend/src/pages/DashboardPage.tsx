@@ -36,7 +36,7 @@ const DashboardPage = () => {
       value: 1247,
       change: '+12%',
       changeType: 'positive' as const,
-      icon: '👥',
+      icon: 'users',
       color: 'blue' as const
     },
     {
@@ -44,7 +44,7 @@ const DashboardPage = () => {
       value: 48,
       change: '+5%',
       changeType: 'positive' as const,
-      icon: '🗺️',
+      icon: 'map',
       color: 'green' as const
     },
     {
@@ -52,7 +52,7 @@ const DashboardPage = () => {
       value: 156,
       change: '+8%',
       changeType: 'positive' as const,
-      icon: '📸',
+      icon: 'camera',
       color: 'purple' as const
     },
     {
@@ -60,7 +60,7 @@ const DashboardPage = () => {
       value: 23,
       change: '+3%',
       changeType: 'positive' as const,
-      icon: '📝',
+      icon: 'document',
       color: 'orange' as const
     },
     {
@@ -68,7 +68,7 @@ const DashboardPage = () => {
       value: 892,
       change: '+15%',
       changeType: 'positive' as const,
-      icon: '📋',
+      icon: 'clipboard',
       color: 'indigo' as const
     },
     {
@@ -76,7 +76,7 @@ const DashboardPage = () => {
       value: '$45,230',
       change: '+18%',
       changeType: 'positive' as const,
-      icon: '💰',
+      icon: 'banknotes',
       color: 'emerald' as const
     }
   ];
@@ -85,23 +85,27 @@ const DashboardPage = () => {
     switch (activeSection) {
       case 'overview':
         return (
-          <div className="space-y-8">
-            {/* Stats Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {statsData.map((stat, index) => (
-                <StatsCard key={index} {...stat} />
-              ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Stats Grid (spans 2 cols on lg) */}
+            <div className="lg:col-span-2 space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {statsData.map((stat, index) => (
+                  <StatsCard key={index} {...stat} />
+                ))}
+              </div>
             </div>
 
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <button
                   onClick={() => setActiveSection('users')}
                   className="p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors duration-200 text-left"
                 >
-                  <div className="text-2xl mb-2">👥</div>
+                  <div className="w-10 h-10 mb-2 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a4 4 0 00-4-4h-3m-4 6H2v-2a4 4 0 014-4h3m6-4a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                  </div>
                   <div className="font-medium text-gray-900">Manage Users</div>
                   <div className="text-sm text-gray-600">View and edit user accounts</div>
                 </button>
@@ -109,7 +113,9 @@ const DashboardPage = () => {
                   onClick={() => setActiveSection('tours')}
                   className="p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors duration-200 text-left"
                 >
-                  <div className="text-2xl mb-2">🗺️</div>
+                  <div className="w-10 h-10 mb-2 rounded-lg bg-green-100 text-green-600 flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A2 2 0 013 15.382V5a2 2 0 012-2h0a2 2 0 012 2v8l6 3 6-3V5a2 2 0 00-2-2h0"/></svg>
+                  </div>
                   <div className="font-medium text-gray-900">Manage Tours</div>
                   <div className="text-sm text-gray-600">Add and edit tour packages</div>
                 </button>
@@ -117,7 +123,9 @@ const DashboardPage = () => {
                   onClick={() => setActiveSection('gallery')}
                   className="p-4 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors duration-200 text-left"
                 >
-                  <div className="text-2xl mb-2">📸</div>
+                  <div className="w-10 h-10 mb-2 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7h3l2-3h8l2 3h3v12H3V7zm9 3a4 4 0 100 8 4 4 0 000-8z"/></svg>
+                  </div>
                   <div className="font-medium text-gray-900">Manage Gallery</div>
                   <div className="text-sm text-gray-600">Upload and organize images</div>
                 </button>
@@ -125,7 +133,9 @@ const DashboardPage = () => {
                   onClick={() => setActiveSection('blog')}
                   className="p-4 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors duration-200 text-left"
                 >
-                  <div className="text-2xl mb-2">📝</div>
+                  <div className="w-10 h-10 mb-2 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                  </div>
                   <div className="font-medium text-gray-900">Manage Blog</div>
                   <div className="text-sm text-gray-600">Create and edit blog posts</div>
                 </button>
@@ -133,9 +143,9 @@ const DashboardPage = () => {
             </div>
 
             {/* Recent Activity */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <div className="lg:col-span-3 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h3>
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                 <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <div className="flex-1">
@@ -202,10 +212,7 @@ const DashboardPage = () => {
         >
           <div className="max-w-7xl mx-auto">
             <div className="animate-on-scroll">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Dashboard</h1>
-              <p className="text-gray-600">
-                Manage your travel platform with ease. Monitor users, tours, gallery, and blog content.
-              </p>
+              <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
             </div>
           </div>
         </div>

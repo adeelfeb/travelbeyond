@@ -92,7 +92,7 @@ const LandingPage = () => {
       description: 'Explore the vibrant city life of Santiago and the breathtaking beauty of the Andes. Discover local gems, enjoy authentic cuisine, and take in stunning mountain views. A perfect mix of urban culture and natural wonders.',
       price: 899,
       duration: '7 days',
-      image: '/SantiagoAndMountains1.webp',
+      image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=60',
       rating: 4.8,
       location: 'Santiago, Chile'
     },
@@ -102,7 +102,7 @@ const LandingPage = () => {
       description: 'Embark on a journey through some of the most prestigious vineyards in the world. Savor the rich flavors of Chilean wines while enjoying picturesque views of rolling hills and expertly crafted estates.',
       price: 2499,
       duration: '14 days',
-      image: '/SantiagoAndMountains2.webp',
+      image: 'https://images.unsplash.com/photo-1511910849309-0dffb062c7dc?w=800&auto=format&fit=crop&q=60',
       rating: 4.9,
       location: 'Multiple Countries'
     },
@@ -112,7 +112,7 @@ const LandingPage = () => {
       description: 'Discover the beauty of Chile’s coastline with our curated shore excursions. From tranquil beaches to bustling port cities, explore local markets, dine on fresh seafood, and take in breathtaking ocean views.',
       price: 1599,
       duration: '10 days',
-      image: '/SantiagoAndMountains3.webp',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=60',
       rating: 4.7,
       location: 'Japan'
     },
@@ -122,7 +122,7 @@ const LandingPage = () => {
       description: 'Journey to the untamed wilderness of Patagonia and explore the iconic Torres del Paine. Experience towering granite peaks, glacial lakes, and vast open landscapes. Hike through some of the world’s most awe-inspiring scenery, where nature’s raw beauty is on full display.',
       price: 1899,
       duration: '12 days',
-      image: '/SantiagoAndMountains4.webp',
+      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=60',
       rating: 4.9,
       location: 'Chile'
     }

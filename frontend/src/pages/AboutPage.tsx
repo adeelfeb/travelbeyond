@@ -273,7 +273,7 @@ const AboutPage = () => {
               </div>
               <div className="animate-on-scroll lg:w-1/2">
                 <img
-                  src="/Our%20Mission.jpg"
+                  src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1000&auto=format&fit=crop&q=60"
                   alt="Mission"
                   className="rounded-lg shadow-md"
                 />
@@ -288,7 +288,7 @@ const AboutPage = () => {
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               <div className="animate-on-scroll lg:w-1/2 order-2 lg:order-1">
                 <img
-                  src="/Our%20Vision.jpg"
+                  src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1000&auto=format&fit=crop&q=60"
                   alt="Vision"
                   className="rounded-lg shadow-md"
                 />
