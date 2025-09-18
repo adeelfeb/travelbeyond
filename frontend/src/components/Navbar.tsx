@@ -9,7 +9,7 @@ import {
   FiBook,
   FiMail,
   FiUser,
-  FiLogIn,
+  
   FiLogOut,
   FiX,
   FiMenu
