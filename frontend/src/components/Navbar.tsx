@@ -205,6 +205,15 @@ const Navbar = () => {
                     Sign In
                   </Link> */}
                   <Link
+                    to="/dashboard"
+                    className={`${isScrolled
+                      ? 'text-blue-600 border border-blue-600 hover:bg-blue-50'
+                      : 'text-white border border-white hover:bg-white/10'
+                      } px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200`}
+                  >
+                    Dashboard
+                  </Link>
+                  <Link
                     to="/login"
                     className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
@@ -315,6 +324,13 @@ const Navbar = () => {
                   </>
                 ) : (
                   <>
+                    <Link
+                      to="/dashboard"
+                      className="block w-full text-center bg-blue-100 text-blue-700 px-4 py-3 rounded-lg font-medium hover:bg-blue-200 transition-colors duration-200"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Dashboard
+                    </Link>
                     <Link
                       to="/login"
                       className="block w-full text-center bg-gray-100 text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200"
